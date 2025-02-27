@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import { category_allow } from '../../configs/category';
+import { category_allow } from '../../configs/category.js';
 
 const companySchema = new Schema({
     name:{
@@ -12,7 +12,7 @@ const companySchema = new Schema({
         required: [true, 'Company description is required'],
         maxLength: [200,  "The username cannot exceed 200 characters"]
     },
-    category_allow:{
+    category:{
         type: String,
         enum: category_allow,
         required: [true, 'Company category is required']
@@ -52,4 +52,4 @@ const companySchema = new Schema({
     }
 })
 
-export const Company = model('Company', companySchema)
+export default model('Company', companySchema)

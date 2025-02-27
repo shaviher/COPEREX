@@ -6,6 +6,7 @@ import morgan from "morgan"
 import helmet from "helmet"
 import { dbConnection  } from "./mongo.js"
 import userRoutes from "../src/user/user.routes.js"
+import companyRoutes from "../src/company/company.routes.js"
 import { adminCreate } from "./admin.js";
 
 
@@ -19,6 +20,7 @@ const middlewares = (app) => {
 
 const routes = (app) => {
     app.use("/COPEREX/v1/user", userRoutes)
+    app.use("/COPEREX/v1/company", companyRoutes)
 }
 
 const connectDB = async () => {
