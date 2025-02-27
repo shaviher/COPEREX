@@ -3,8 +3,11 @@
 import express from "express"
 import cors from "cors"
 import morgan from "morgan"
-import { dbConnection  } from "./mongo.js"
 import helmet from "helmet"
+import { dbConnection  } from "./mongo.js"
+import userRoutes from "../src/user/user.routes.js"
+import { adminCreate } from "./admin.js";
+
 
 
 const middlewares = (app) => {
@@ -12,6 +15,10 @@ const middlewares = (app) => {
     app.use(cors())
     app.use(helmet())
     app.use(morgan("dev"))
+}
+
+const routes = (app) => {
+    app.use("/COPEREX/v1/user", userRoutes)
 }
 
 const connectDB = async () => {
@@ -26,10 +33,13 @@ export const initServer = () => {
     const app = express()
     try{
         middlewares(app)
-        connectDB()
+        connectDB().then(async () => { 
+            await adminCreate();
+        }) 
+        routes(app)
         const port = process.env.PORT || 3001;
         app.listen(port, () => {
-            console.log(`Server running on port ${port} matutina`);
+            console.log(`Server running on port ${port}`);
         });
     } catch (err) {
         console.log(`Server init failed: ${err}`);
