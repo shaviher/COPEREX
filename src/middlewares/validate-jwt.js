@@ -8,7 +8,9 @@ export const validateJWT = async (req, res, next) => {
         if(!token){
             return res.status(400).json({
                 success: false,
-                message: "There is no token in the request"
+                message: "There is no token in the request",
+                
+
             })
         }
 
@@ -32,7 +34,8 @@ export const validateJWT = async (req, res, next) => {
             })
         }
 
-        req.usuario = user
+        req.user = user
+        
         next()
     }catch(err){
         return res.status(500).json({
