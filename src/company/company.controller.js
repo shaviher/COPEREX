@@ -156,7 +156,7 @@ export const listCompany = async (req, res) => {
 
         return res.status(200).json({
             success: true,
-            message: "company listed successfully",
+            message: "successfully listed company is already in the Excel Folder",
             company
         });
 

@@ -1,0 +1,150 @@
+[{
+  "_id": {
+    "$oid": "67c10fc323f499b974489066"
+  },
+  "name": "Innova",
+  "description": "Empresa líder en desarrollo de software y ciberseguridad.",
+  "category": "Technology",
+  "impactLevel": "Medium",
+  "foundationYear": 2015,
+  "email": "contact@innova.com",
+  "phone": "98995432",
+  "address": "Avenida Digital 46, Ciudad",
+  "website": "https://www.innovatech.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c227d03f696aa84024ecc3"
+  },
+  "name": "ShopEasy",
+  "description": "Tienda en línea con envíos rápidos y seguros.",
+  "category": "Retail and E-commerce",
+  "impactLevel": "Medium",
+  "foundationYear": 2018,
+  "email": "support@shopeasy.com",
+  "phone": "32109876",
+  "address": "Centro Comercial Digital, Ciudad",
+  "website": "https://www.shopeasy.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c2281c3f696aa84024ecc7"
+  },
+  "name": "Delicious Bites",
+  "description": "Cadena de restaurantes con comida rápida saludable.",
+  "category": "Food and Beverage",
+  "impactLevel": "High",
+  "foundationYear": 2015,
+  "email": "contact@deliciousbites.com",
+  "phone": "43210987",
+  "address": "Plaza Central, Ciudad",
+  "website": "https://www.deliciousbites.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c228633f696aa84024eccb"
+  },
+  "name": "SecureFinance",
+  "description": "Servicios financieros y asesoría en inversiones.",
+  "category": "Finance and Insurance",
+  "impactLevel": "Medium",
+  "foundationYear": 2010,
+  "email": "help@securefinance.com",
+  "phone": "10987654",
+  "address": "Distrito Financiero, Ciudad",
+  "website": "https://www.securefinance.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c2286f3f696aa84024eccf"
+  },
+  "name": "TravelWorld",
+  "description": "Agencia de viajes con paquetes personalizados.",
+  "category": "Tourism and Hospitality",
+  "impactLevel": "Low",
+  "foundationYear": 2012,
+  "email": "info@travelworld.com",
+  "phone": "09876543",
+  "address": "Avenida del Turismo, Ciudad",
+  "website": "https://www.travelworld.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c228833f696aa84024ecd3"
+  },
+  "name": "EduSmart",
+  "description": "Plataforma de aprendizaje en línea con cursos interactivos.",
+  "category": "Education",
+  "impactLevel": "Medium",
+  "foundationYear": 2016,
+  "email": "help@edusmart.com",
+  "phone": "54321098",
+  "address": "Avenida del Conocimiento, Ciudad",
+  "website": "https://www.edusmart.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c228923f696aa84024ecd7"
+  },
+  "name": "Wellness Life",
+  "description": "Productos y servicios para el bienestar integral.",
+  "category": "Health and Wellness",
+  "impactLevel": "High",
+  "foundationYear": 2018,
+  "email": "support@wellnesslife.com",
+  "phone": "65432109",
+  "address": "Zona Médica, Ciudad",
+  "website": "https://www.wellnesslife.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c2289f3f696aa84024ecdb"
+  },
+  "name": "ProService",
+  "description": "Consultoría empresarial y servicios financieros.",
+  "category": "Services",
+  "impactLevel": "Low",
+  "foundationYear": 2012,
+  "email": "contact@proservice.com",
+  "phone": "76543210",
+  "address": "Centro Ejecutivo, Ciudad",
+  "website": "https://www.proservice.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c228ae3f696aa84024ecdf"
+  },
+  "name": "ManuPro",
+  "description": "Fabricación de componentes electrónicos de alta calidad.",
+  "category": "Manufacturing",
+  "impactLevel": "Medium",
+  "foundationYear": 2005,
+  "email": "info@manupro.com",
+  "phone": "87654321",
+  "address": "Zona Industrial 12, Ciudad",
+  "website": "https://www.manupro.com",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67c228bd3f696aa84024ece3"
+  },
+  "name": "Innovatech",
+  "description": "Empresa líder en desarrollo de software y ciberseguridad.",
+  "category": "Technology",
+  "impactLevel": "High",
+  "foundationYear": 2010,
+  "email": "contact@innovatech.com",
+  "phone": "98765432",
+  "address": "Avenida Digital 456, Ciudad",
+  "website": "https://www.innovatech.com",
+  "__v": 0
+}]

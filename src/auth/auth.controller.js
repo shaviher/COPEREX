@@ -1,4 +1,4 @@
-import User from "./user.model.js"
+import User from "../user/user.model.js"
 import { verify } from "argon2"
 import { generateJWT } from "../helpers/generate-jwt.js"
 

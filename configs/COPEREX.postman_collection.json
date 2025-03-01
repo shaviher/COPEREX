@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "872c1c44-c342-4eb1-80ca-70e9fd914aa4",
+		"name": "COPEREX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41838921"
+	},
+	"item": [
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "http://localhost:3001/COPEREX/v1/company/register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmZjZkYTJiZDg3NTk3ZTMzYzY1MzciLCJpYXQiOjE3NDA3MDQ2NjYsImV4cCI6MTc0MDcwODI2Nn0.MNWGDV1GYq2mjOzSqaTcQSP2kQqoqveiQHBSyzsuHsw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ServicePro\",\r\n    \"description\": \"A company providing various business and personal services.\",\r\n    \"email\": \"servicepro@example.com\",\r\n    \"phone\": \"+1234567892\",\r\n    \"address\": \"789 Service Lane, City Center, NY\",\r\n    \"category\": \"Services\",\r\n    \"impactLevel\": \"Medium\",\r\n    \"foundationYear\": 2012,\r\n    \"website\": \"http://www.servicepro.com\",\r\n    \"password\": \"strongPassword123\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/COPEREX/v1/company/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"COPEREX",
+								"v1",
+								"company",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/COPEREX/v1/company/update/67c10fc323f499b974489066",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmZjZkYTJiZDg3NTk3ZTMzYzY1MzciLCJpYXQiOjE3NDA3NzczMTcsImV4cCI6MTc0MDc4MDkxN30.U8ZPl-kepETCaUvyUx9hsIUY8PlPRO-ARR-NDEsg7lA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Innova\",\r\n  \"description\": \"Empresa líder en desarrollo de software y ciberseguridad.\",\r\n  \"category\": \"Technology\",\r\n  \"impactLevel\": \"Medium\",\r\n  \"foundationYear\": 2015,\r\n  \"email\": \"contact@innova.com\",\r\n  \"phone\": \"98995432\",\r\n  \"address\": \"Avenida Digital 46, Ciudad\",\r\n  \"website\": \"https://www.innovatech.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/COPEREX/v1/company/update/67c10fc323f499b974489066",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"COPEREX",
+								"v1",
+								"company",
+								"update",
+								"67c10fc323f499b974489066"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/COPEREX/v1/company/list-export?category=Technology",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmZjZkYTJiZDg3NTk3ZTMzYzY1MzciLCJpYXQiOjE3NDA3NzczMTcsImV4cCI6MTc0MDc4MDkxN30.U8ZPl-kepETCaUvyUx9hsIUY8PlPRO-ARR-NDEsg7lA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/COPEREX/v1/company/list-export?category=Technology\n",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"COPEREX",
+								"v1",
+								"company",
+								"list-export"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Technology\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/COPEREX/v1/company/list-export?minYears=5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmZjZkYTJiZDg3NTk3ZTMzYzY1MzciLCJpYXQiOjE3NDA3NzczMTcsImV4cCI6MTc0MDc4MDkxN30.U8ZPl-kepETCaUvyUx9hsIUY8PlPRO-ARR-NDEsg7lA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/COPEREX/v1/company/list-export?minYears=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"COPEREX",
+								"v1",
+								"company",
+								"list-export"
+							],
+							"query": [
+								{
+									"key": "minYears",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/COPEREX/v1/company/list-export?maxYears=20",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmZjZkYTJiZDg3NTk3ZTMzYzY1MzciLCJpYXQiOjE3NDA3NzczMTcsImV4cCI6MTc0MDc4MDkxN30.U8ZPl-kepETCaUvyUx9hsIUY8PlPRO-ARR-NDEsg7lA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/COPEREX/v1/company/list-export?maxYears=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"COPEREX",
+								"v1",
+								"company",
+								"list-export"
+							],
+							"query": [
+								{
+									"key": "maxYears",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/COPEREX/v1/company/list-export?minYears=5&maxYears=20",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmZjZkYTJiZDg3NTk3ZTMzYzY1MzciLCJpYXQiOjE3NDA3NzczMTcsImV4cCI6MTc0MDc4MDkxN30.U8ZPl-kepETCaUvyUx9hsIUY8PlPRO-ARR-NDEsg7lA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/COPEREX/v1/company/list-export?minYears=5&maxYears=20",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"COPEREX",
+								"v1",
+								"company",
+								"list-export"
+							],
+							"query": [
+								{
+									"key": "minYears",
+									"value": "5"
+								},
+								{
+									"key": "maxYears",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/COPEREX/v1/company/list-export?sort=A-Z",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmZjZkYTJiZDg3NTk3ZTMzYzY1MzciLCJpYXQiOjE3NDA3NzczMTcsImV4cCI6MTc0MDc4MDkxN30.U8ZPl-kepETCaUvyUx9hsIUY8PlPRO-ARR-NDEsg7lA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/COPEREX/v1/company/list-export?sort=A-Z",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"COPEREX",
+								"v1",
+								"company",
+								"list-export"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "A-Z"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3001/COPEREX/v1/company/list-export?sort=Z-A",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmZjZkYTJiZDg3NTk3ZTMzYzY1MzciLCJpYXQiOjE3NDA3NzczMTcsImV4cCI6MTc0MDc4MDkxN30.U8ZPl-kepETCaUvyUx9hsIUY8PlPRO-ARR-NDEsg7lA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/COPEREX/v1/company/list-export?sort=Z-A",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"COPEREX",
+								"v1",
+								"company",
+								"list-export"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "Z-A"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "http://localhost:3001/COPEREX/v1/auth/login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"becheverria@gmail.com\",\r\n    \"password\": \"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/COPEREX/v1/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"COPEREX",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

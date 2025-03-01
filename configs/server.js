@@ -5,9 +5,10 @@ import cors from "cors"
 import morgan from "morgan"
 import helmet from "helmet"
 import { dbConnection  } from "./mongo.js"
-import userRoutes from "../src/user/user.routes.js"
+import authRoutes from "../src/auth/auth.routes.js"
 import companyRoutes from "../src/company/company.routes.js"
 import { adminCreate } from "./admin.js";
+import { swaggerDocs, swaggerUi } from "./swagger.js"
 
 
 
@@ -19,8 +20,9 @@ const middlewares = (app) => {
 }
 
 const routes = (app) => {
-    app.use("/COPEREX/v1/user", userRoutes)
+    app.use("/COPEREX/v1/auth", authRoutes)
     app.use("/COPEREX/v1/company", companyRoutes)
+    app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 }
 
 const connectDB = async () => {
@@ -35,9 +37,8 @@ export const initServer = () => {
     const app = express()
     try{
         middlewares(app)
-        connectDB().then(async () => { 
-            await adminCreate();
-        }) 
+        connectDB()
+        adminCreate()
         routes(app)
         const port = process.env.PORT || 3001;
         app.listen(port, () => {
